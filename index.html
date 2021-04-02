@@ -1,2 +1,75 @@
-<!-- HTML goes here -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
+<head>
+    <meta charset="utf-8">
+    <title>Kiaju List Updater</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <!-- Link to js -->
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <!-- Establish form for input of data by user -->
+    <form id="new-item-form">
+        <div id="form-wrapper">
+
+            <!-- Input via text for type entered here -->
+            <div class="form-item">
+                <label for="kaiju-name" class="primary">Kaiju Name</label>
+                <input type="text" id="kaiju-name" required />
+            </div>
+
+            <!-- Input via text for type entered here -->
+            <div class="form-item">
+                <label for="kaiju-dob" class="primary">DOB</label>
+                <input type="text" id="kaiju-dob" required />
+            </div>
+
+            <!-- Input via text for type entered here -->
+            <div class="form-item">
+                <label for="kaiju-type" class="primary">Type</label>
+                <input type="text" id="kaiju-type" required />
+            </div>
+
+            <!-- Input via text for treatment entered here -->
+            <div class="form-item">
+                <label for="kaiju-treatment" class="primary">Treatment</label>
+                <input type="text" id="kaiju-treatment" required />
+            </div>
+
+            <!-- Input via drop down menu for Vets -->
+            <div class="form-item">
+                <label for="kaiju-vet" class="primary">Vet</label>
+                <select id="kaiju-vet">
+                    <option value="" disabled selected></option>
+                    <option value="Serizawa">Dr. Daisuke Serizawa</option>
+                    <option value="Denham">Captain Carl Denham<</option>
+                    <option value="Pentecost">Marshal Stacker Pentecost</option>
+                    <option value="Sang-ok">Director Shin Sang-ok</option>
+                    <option value="Sinnott">Tim Sinnott</option>
+                </select>
+            </div>
+
+            <!-- tickbox for register/un-registered entered here -->
+            <div class="form-item">
+                <label>Registered</label>
+                <input type="checkbox" id="registered" name="registered" value="registered" required/>
+            </div>
+
+        <!-- submit all inputs with this -->
+        </div>
+        <input type="submit" value="save" />
+    </form>
+
+    <!-- Button for deleting List below -->
+    <button id="delete-all">Delete All</button>
+
+    <!-- Return List of Kaiju here -->
+    <h1>Kaiju List</h1>
+    <ul id="Kaiju-list"></ul>
+</body>
+
+</html>
