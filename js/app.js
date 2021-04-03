@@ -24,6 +24,10 @@ const createKaijuListItem = function (form) {
     name.textContent = form.name.value;
     kaijuListItem.appendChild(name);
 
+    const gender = document.createElement('h5');
+    gender.textContent = form.gender.value;
+    kaijuListItem.appendChild(gender);
+
     const dob = document.createElement('p');
     dob.textContent = form.dob.value;
     kaijuListItem.appendChild(dob);

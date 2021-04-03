@@ -18,9 +18,9 @@ label.primary {
   margin: 0.4em 0;
 }
 
-label::after {
+/* label::after {
   content: ":";
-}
+} */
 
 button, input[type="submit"] {
   margin-top: 1rem;
