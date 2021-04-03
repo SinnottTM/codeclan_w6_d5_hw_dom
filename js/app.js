@@ -24,7 +24,7 @@ const createKaijuListItem = function (form) {
     name.textContent = form.name.value;
     kaijuListItem.appendChild(name);
 
-    const gender = document.createElement('h5');
+    const gender = document.createElement('p');
     gender.textContent = form.gender.value;
     kaijuListItem.appendChild(gender);
 
@@ -55,4 +55,3 @@ const handleDeleteAllClick = function (event) {
     const kaijuList = document.querySelector('#kaiju-list');
     kaijuList.innerHTML = '';
 }
-

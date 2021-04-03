@@ -3,15 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kiaju List Updater</title>
 
     <!-- Link to CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <!-- Link to js -->
     <script src="js/app.js"></script>
+
+    <title>Kaiju Vet Management App</title>
 </head>
 
 <body>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="/">Add New Kaiju</a></li>
+        </ul>
+    </nav>
     <!-- Establish form for input of data by user -->
     <form id="new-kaiju-form">
         <div id="form-wrapper">
@@ -24,6 +31,7 @@
 
             <!-- Input via radio for gender-->
             <div class="form-item">
+                Gender<br>
                 <input type="radio" id="male" name="gender" value="male">
                 <label for="male">- Male</label><br>
                 <input type="radio" id="female" name="gender" value="female">
@@ -32,10 +40,16 @@
                 <label for="other">- Other</label>
             </div>
 
-            <!-- Input via text for type entered here -->
-            <div class="form-item">
+            <!-- Original Input via text for type entered here -->
+            <!-- <div class="form-item">
                 <label for="dob" class="primary">DOB</label>
                 <input type="text" id="dob" required />
+            </div> -->
+
+            <!-- Input via date for dob -->
+            <div class="form-item">
+                <label for="dob" class="primary">DOB</label>
+                <input type="date" id="dob" name="dob">
             </div>
 
             <!-- Input via text for type entered here -->
@@ -50,6 +64,12 @@
                 <input type="text" id="treatment" required />
             </div>
 
+        </div>
+
+        <br><br>
+
+        <div id="form-wrapper">
+                    
             <!-- Input via drop down menu for Vets -->
             <div class="form-item">
                 <label for="vet" class="primary">Vet</label>
@@ -68,21 +88,27 @@
                 <label>Registered</label>
                 <input type="checkbox" id="registered" name="registered" value="registered" required/>
             </div>
+
         </div>
 
+        <br><br>
+      
         <!-- submit all inputs with this -->
-        <input type="submit" value="save" />
+        <input type="submit" value="Save" />
 
         <!-- resets all values in text boxes etc -->
         <input type="reset">
+
+        <!-- Button for deleting List below -->
+        <button id="delete-all">Delete All</button>
     </form>
 
-    <!-- Button for deleting List below -->
-    <button id="delete-all">Delete All</button>
-
     <!-- Return List of Kaiju here -->
-    <h1>Kaiju List</h1>
+    <h4>Total Registered Kaiju</h4>
     <ul id="kaiju-list"></ul>
 </body>
+
+<footer>
+</footer>
 
 </html>
